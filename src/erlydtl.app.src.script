@@ -7,7 +7,7 @@ ExtraApps = case application:get_key(syntax_tools, vsn) of
 
 {application, erlydtl,
  [{description, "Django Template Language for Erlang"},
-  {vsn, git},
+  {vsn, "0.11.1-irccloud-20160409"},
   {modules, []},
   {applications, [kernel, stdlib, compiler, syntax_tools|ExtraApps]},
   {registered, []}

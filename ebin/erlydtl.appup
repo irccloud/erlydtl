@@ -1,0 +1,10 @@
+{"0.11.1-irccloud-20160409",
+    [{"0.9.2+build.741.refde00ccf",
+        [
+        {restart_application, erlydtl}
+        ]}],
+    [{"0.9.2+build.741.refde00ccf",
+        [
+        {restart_application, erlydtl}
+        ]}]
+}.

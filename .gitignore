@@ -1,4 +1,3 @@
-ebin
 *.swp
 erl_crash.dump
 examples/rendered_output
@@ -12,6 +11,7 @@ deps
 .eunit
 /.edts
 /.rebar/
-/*.beam
+*.beam
+ebin/*.app
 /.settings/
 /.project
