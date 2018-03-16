@@ -535,15 +535,15 @@ pprint(Input) ->
 
 %% @doc Returns a random item from the given list.
 random(Input) when is_list(Input) ->
-    lists:nth(random:uniform(erlang:length(Input)), Input);
+    lists:nth(rand:uniform(erlang:length(Input)), Input);
 random(_) ->
     "".
 
 random_num(Value) ->
-    random:seed(erlang:phash2([node()]),
+    rand:seed(erlang:phash2([node()]),
                 monotonic_time(),
                 unique_integer()),
-    random:uniform(Value).
+    rand:uniform(Value).
 
 %% random tags to be used when using erlydtl in testing
 random_range(Range) ->
@@ -554,7 +554,7 @@ random_range(Range) ->
 random_range(Start, End) when End >= Start ->
     %?debugFmt("Input, Start, End: ~p,~p,~p~n",[Input,Start,End]),
     Range = End - Start,
-    Rand = random:uniform(Range),
+    Rand = rand:uniform(Range),
     Num = Rand + Start,
     lists:flatten(io_lib:format("~B",[Num])).
 
